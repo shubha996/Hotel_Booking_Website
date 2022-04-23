@@ -2,7 +2,18 @@
     height: 60px;
     width: 60px;
 }
+.header-div{
+    background-color: rosybrown;
+}
+.footer-div{
+    background-color: rosybrown;
+    margin-bottom: 0px;
+}
 .social-media-logo{
     height: 20px;
     width: 22px;
+}
+body{
+    margin: 0%; 
+    background-color: #e0e0e0;
 }

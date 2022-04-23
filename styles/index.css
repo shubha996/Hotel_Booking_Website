@@ -1,4 +1,23 @@
 .city-image{
     height: 150px;
     width: 150px;
+    border-radius: 25%;    
+}
+.city-image-div{
+    padding: 4%;
+    
+}
+.search-bar-and-background-image-div{
+    height: 380px;
+    background-image: url("https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.city-cards-div{
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
 }
