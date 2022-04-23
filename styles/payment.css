@@ -1,6 +1,7 @@
 .hotel-image{
     height: 500px;
     width: 500px;
+<<<<<<< HEAD
 }
 .hotel-details{
     background-color: rgb(132, 136, 139);
@@ -18,4 +19,6 @@
     border: 1px solid black;
     border-radius: 5px;
     padding: 1% 2%;
+=======
+>>>>>>> b3fcf207654dc1f5935fe8c89a5995ab2e4dee59
 }

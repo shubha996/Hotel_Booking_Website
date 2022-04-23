@@ -1,6 +1,7 @@
 .hotel-image{
     height: 200px;
     width: 250px;
+<<<<<<< HEAD
 }
 .content-div{
     margin: 2%;
@@ -8,4 +9,6 @@
 .hotel-image-description-div{
     background-color: rgb(132, 136, 139);
     width: 40%;
+=======
+>>>>>>> b3fcf207654dc1f5935fe8c89a5995ab2e4dee59
 }

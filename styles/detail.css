@@ -1,6 +1,7 @@
 .hotel-image{
     height: 500px;
     width: 500px;
+<<<<<<< HEAD
     margin: 2% 4% 0% 4%;
 }
 .form-div{
@@ -8,4 +9,6 @@
 }
 .hotel-description-div{
     margin: 1% 4% 2% 4%;
+=======
+>>>>>>> b3fcf207654dc1f5935fe8c89a5995ab2e4dee59
 }
