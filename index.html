@@ -4,30 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <title>Index</title>
 </head>
 <body>
     <div class="main-div">
-        <div class="header-div">
-            <img src="./assests/images/logo.png" alt="logo" height="100px" width="150px">
-            <a href="login.html" target="blank">Login</a>
-        </div>
-        <div class="content-div">
-            <input type="text" placeholder="City"><br>
-            <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi" height="300px" width="300px"></a>
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa" height="300px" width="300px">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad" height="300px" width="300px">
-            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata" height="300px" width="300px">
-            <p><a href="index.html">View more >></a></p>
-        </div>
-        <div class="footer-div">
-            <p><a href="contact.html">Contact Us</a></p>
-            <a href="https://www.facebook.com/"><img src="./assests/images/facebook.png" alt="facebook-logo" height="20px" width="22px"></a>
-            <a href="https://www.twitter.com"><img src="./assests/images/twitter.png" alt="twitter-logo" height="20px" width="22px"></a>
-            <a href="https://www.instagram.com"><img src="./assests/images/instagram.png" alt="instagram-logo" height="20px" width="22px"></a>
-            <p>&copy; 2021 Shubham_Gawai</p>
-        </div>
+        <header>
+            <div class="header-div">
+                <img id="header-logo" src="./assests/images/logo.png" alt="logo">
+                <a href="login.html" target="blank">Login</a>
+            </div>
+        </header>
+        <section>
+            <div class="content-div">
+                <input type="text" placeholder="City"><br>
+                <a href="list.html"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi"></a>
+                <img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa">
+                <img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad">
+                <img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata">
+                <p><a href="index.html">View more >></a></p>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-div">
+                <p><a href="contact.html">Contact Us</a></p>
+                <a href="https://www.facebook.com/"><img class="social-media-logo" src="./assests/images/facebook.png" alt="facebook-logo"></a>
+                <a href="https://www.twitter.com"><img class="social-media-logo" src="./assests/images/twitter.png" alt="twitter-logo"></a>
+                <a href="https://www.instagram.com"><img class="social-media-logo" src="./assests/images/instagram.png" alt="instagram-logo"></a>
+                <p>&copy; 2021 Shubham_Gawai</p>
+            </div>
+        </footer>
     </div>
-    
 </body>
 </html>
