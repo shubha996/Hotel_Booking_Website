@@ -1,7 +1,6 @@
 .city-image{
     height: 150px;
     width: 150px;
-<<<<<<< HEAD
     border-radius: 25%;    
 }
 .city-image-div{
@@ -22,6 +21,3 @@
     display: flex;
     justify-content: space-evenly;
 }
-=======
-}
->>>>>>> b3fcf207654dc1f5935fe8c89a5995ab2e4dee59
