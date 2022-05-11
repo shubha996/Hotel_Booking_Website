@@ -4,42 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Index</title>
 </head>
 <body>
-    <div class="main-div">
-        <header>
-            <div class="header-div">
-                <img id="header-logo" src="./assests/images/logo.png" alt="logo">
-                <a href="login.html" target="blank">Login</a>
-            </div>
-        </header>
-        <section>
-            <div class="content-div">
-                <div class="search-bar-and-background-image-div">
-                    <input type="text" placeholder="City"><br>
-                </div>                
-                <div class="city-cards-div">
-                    <div class="city-image-div"><a href="list.html"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi"></a></div>
-                    <div class="city-image-div"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa"></div>
-                    <div class="city-image-div"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad"></div>
-                    <div class="city-image-div"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata"></div>
-                </div>
-                               
-            </div>
-            <a href="index.html">View more >></a> 
-        </section>
-        <footer>
-            <div class="footer-div">
+    <header>
+        <div class="header-div">
+            <div id="logo-div"><img id="header-logo" src="./assests/images/logo.png" alt="logo"></div>
+            <div id="login-div"><a href="login.html"><p id="header-login">Login</p></a></div>
+        </div>
+    </header>
+    <section>
+        <div class="content-div">
+            <div class="search-bar-and-background-image-div">
+                <input id="searchbar-input" type="text" placeholder="City"><br>
+            </div>                
+            <div class="city-cards-div">
+                <div class="city-image-div"><a href="list.html"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" alt="Delhi"></a></div>
+                <div class="city-image-div"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" alt="Goa"></div>
+                <div class="city-image-div"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" alt="Hyderabad"></div>
+                <div class="city-image-div"><img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" alt="Kolkata"></div>
+            </div>    
+            <a id="view-more" href="index.html">View more >></a>          
+        </div>
+    </section>
+    <footer>
+        <div class="footer">
+            <div class="contactus">
                 <p><a href="contact.html">Contact Us</a></p>
-                <a href="https://www.facebook.com/"><img class="social-media-logo" src="./assests/images/facebook.png" alt="facebook-logo"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2021 Shubham-Gawai@1996</p>
+            </div>
+            <div class="socialmedia">
                 <a href="https://www.twitter.com"><img class="social-media-logo" src="./assests/images/twitter.png" alt="twitter-logo"></a>
                 <a href="https://www.instagram.com"><img class="social-media-logo" src="./assests/images/instagram.png" alt="instagram-logo"></a>
-                <p>&copy; 2021 Shubham_Gawai</p>
+                <a href="https://www.facebook.com/"><img class="social-media-logo" src="./assests/images/facebook.png" alt="facebook-logo"></a>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>

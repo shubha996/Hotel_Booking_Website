@@ -3,9 +3,29 @@
     width: 250px;
 }
 .content-div{
-    margin: 2%;
+    margin: 5% 2%;
 }
 .hotel-image-description-div{
     background-color: rgb(132, 136, 139);
-    width: 40%;
+    width: 80%;
+}
+ul{
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.map-div{
+    display: none;
+}
+li{
+    padding: 2%;
+}
+#hotel-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-left: 10%;
+    row-gap: 50px;
 }

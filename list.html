@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/list.css">
     <title>List</title>
@@ -14,39 +15,41 @@
     <div class="main-div">
         <header>
             <div class="header-div">
-                <a href="index.html"><img id="header-logo" src="./assests/images/logo.png" alt="logo" height="100px" width="150px"></a>
-                <a href="login.html" target="blank">Login</a>
+                <div id="logo-div"><a href="index.html"><img id="header-logo" src="./assests/images/logo.png" alt="logo"></a></div>
+                <div id="login-div"><a href="login.html" target="blank"><p id="header-login">Login</p></a></div>
             </div>
         </header>
         <section>
             <div class="content-div">
-                <ul>
+                <div><ul>
                     <li>
                         <a href="#list-view-div-start" >List View</a>
                     </li>
                     <li>
                         <a href="#map-view-div-start">Map View</a>
                     </li>
-                </ul>
-                <a href="detail.html">
-                    <div id="list-view-div-start" class="hotel-image-description-div">
-                        <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Hotel-Radisson-Blu">
-                        <h3>Radisson Blu Hotel</h3>
-                        <p>5 Star</p>
+                </ul></div>
+                <div id="hotel-list">
+                    <a href="detail.html">
+                        <div id="list-view-div-start" class="hotel-image-description-div">
+                            <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Hotel-Radisson-Blu">
+                            <h3>Radisson Blu Hotel</h3>
+                            <p>5 Star</p>
+                            <p>New Delhi</p>
+                        </div>
+                    </a>
+                    <div class="hotel-image-description-div">
+                        <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="The-Lalit-Hotel">
+                        <h3>The Lalit</h3>
+                        <p>4.5 Star</p>
                         <p>New Delhi</p>
                     </div>
-                </a>
-                <div class="hotel-image-description-div">
-                    <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" alt="The-Lalit-Hotel">
-                    <h3>The Lalit</h3>
-                    <p>4.5 Star</p>
-                    <p>New Delhi</p>
-                </div>
-                <div class="hotel-image-description-div">
-                    <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="Taj-Palace">
-                    <h3>Taj Palace</h3>
-                    <p>4.0 Star</p>
-                    <p>New Delhi</p>
+                    <div class="hotel-image-description-div">
+                        <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" alt="Taj-Palace">
+                        <h3>Taj Palace</h3>
+                        <p>4.0 Star</p>
+                        <p>New Delhi</p>
+                    </div>
                 </div>
                 <div id="map-view-div-start" class="map-div">
                     <img src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png" alt="map-image">
@@ -54,15 +57,19 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div class="footer-div">
+        <div class="footer">
+            <div class="contactus">
                 <p><a href="contact.html">Contact Us</a></p>
-                <a href="https://www.facebook.com/"><img class="social-media-logo" src="./assests/images/facebook.png" alt="facebook-logo"></a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2021 Shubham-Gawai@1996</p>
+            </div>
+            <div class="socialmedia">
                 <a href="https://www.twitter.com"><img class="social-media-logo" src="./assests/images/twitter.png" alt="twitter-logo"></a>
                 <a href="https://www.instagram.com"><img class="social-media-logo" src="./assests/images/instagram.png" alt="instagram-logo"></a>
-                <p>&copy; 2021 Shubham_Gawai</p>
+                <a href="https://www.facebook.com/"><img class="social-media-logo" src="./assests/images/facebook.png" alt="facebook-logo"></a>
             </div>
-        </footer>
+        </div>
     </div>
 
 </body>
