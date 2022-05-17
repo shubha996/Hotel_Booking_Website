@@ -1,6 +1,6 @@
 .hotel-image{
-    height: 500px;
-    width: 500px;
+    max-height: 300px;
+    max-width: 270px;
 }
 .hotel-details{
     background-color: rgb(132, 136, 139);
@@ -9,16 +9,34 @@
     margin: auto;
     margin-top: 2%;
     margin-bottom: 2%;
+    display: flex;
+}
+.discription{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .bookin-details{
     margin: 2%;
 }
 .teriff-details{
     margin: 2%;
-    border: 1px solid black;
     border-radius: 5px;
     padding: 1% 2%;
 }
 .content-div{
     margin: 5% 0;
+}
+.payment-booking-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 2%;
+    border-radius: 5px;
+}
+strong{
+    font-family: cursive;
 }

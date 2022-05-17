@@ -1,5 +1,6 @@
 .hotel-image{
     width: 40%;
+    max-height: 350px;
 }
 .content-div{
     margin: 5% 2%;
@@ -8,6 +9,9 @@
     background-color: lightgray;
     width: 100%;
     display: flex;
+}
+.description{
+    padding: 30px;
 }
 ul{
     display: flex;

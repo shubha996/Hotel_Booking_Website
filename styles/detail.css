@@ -4,10 +4,12 @@
     margin: 2%;
 }
 .hotel-description-div{
-    margin: 1% 4% 2% 4%;
+    margin: 1% 4% 7% 4%;
 }
 .content-div{
-    margin: 5% 4%;
+    margin-top: 7%;
+    margin-left: 2%;
+    margin-right: 2%;
     display: flex;
     max-height: 450px;
 }
@@ -24,10 +26,32 @@
     border: 1px solid black;
     border-left: 0px;
 }
-.form-div form{
+/* .form-div form{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-}
+} */
 .form-div input{
+    width: 60%;
+    align-self: flex-end;
+}
+.forminput{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    padding: 25px;
+}
+#btn-booknow{
+    height: 35px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#btn-booknow-div{
+    display: flex;
+    justify-content: center;
+}
+h5{
+    font-family: cursive;
 }
