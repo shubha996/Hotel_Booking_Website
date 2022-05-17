@@ -19,37 +19,51 @@
         </header>
         <section>
             <div class="content-div">
-                <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Hotel-Radisson-Blu">
+                <div class="image-div">
+                    <img class="hotel-image" src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" alt="Hotel-Radisson-Blu">
+                </div>
                 <div class="form-div">
                     <form action="payment.html" method="GET">
-                        <label for="adults">Adults:</label>
-                        <input type="number" id="adults" name="number-of-adults" min="1" value="1" required><br>
-                        <label for="name">Name:</label>
-                        <input type="text" id="2" name="Name" required><br>
-                        <label for="date">From Date:</label>
-                        <input type="date" id="3" name="from-date"><br>
-                        <label for="date">To Date:</label>
-                        <input type="date" id="4" name="to-date"><br>
-                        <label for="total">Total:</label>
-                        <input type="none" id="5" name="total-amount" readonly><br>
-                        <input type="submit" value="Book Now">
+                        <div class="forminput">
+                            <label for="adults">Adults:</label>
+                            <input type="number" id="adults" name="number-of-adults" min="1" value="1" required>
+                        </div>
+                        <div class="forminput">
+                            <label for="name">Name:</label>
+                            <input type="text" id="2" name="Name" required>
+                        </div>
+                        <div class="forminput">
+                            <label for="date">From Date:</label>
+                            <input type="date" id="3" name="from-date">
+                        </div>
+                        <div class="forminput">
+                            <label for="date">To Date:</label>
+                            <input type="date" id="4" name="to-date">
+                        </div>
+                        <div class="forminput">
+                            <label for="total">Total:</label>
+                            <input type="none" id="5" name="total-amount" readonly>
+                        </div>
+                        <div class="forminput">
+                            <input type="submit" value="Book Now">
+                        </div>
                     </form>
                 </div>
-                <div class="hotel-description-div">
-                    <h2>Radisson Blu Hotel</h2>
-                    <p>Ratings</p>
-                    <p>5 Star</p>
-                    <h5>AMENITIES</h5>
-                    <ul>
-                        <li>Room Service</li>
-                        <li>Restaurant</li>
-                        <li>Business Center</li>
-                        <li>Fitness Center</li>
-                        <li>Pool</li>
-                    </ul>
-                    <h5>DESCRIPTION</h5>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque modi magnam fugit, rerum assumenda necessitatibus sapiente consequuntur perferendis! Consectetur repellat in architecto labore dicta, maxime esse error quae aut omnis!</p>
-                </div>
+            </div>
+            <div class="hotel-description-div">
+                <h2>Radisson Blu Hotel</h2>
+                <p>Ratings</p>
+                <p>5 Star</p>
+                <h5>AMENITIES</h5>
+                <ul>
+                    <li>Room Service</li>
+                    <li>Restaurant</li>
+                    <li>Business Center</li>
+                    <li>Fitness Center</li>
+                    <li>Pool</li>
+                </ul>
+                <h5>DESCRIPTION</h5>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque modi magnam fugit, rerum assumenda necessitatibus sapiente consequuntur perferendis! Consectetur repellat in architecto labore dicta, maxime esse error quae aut omnis!</p>
             </div>
         </section>
         <footer>

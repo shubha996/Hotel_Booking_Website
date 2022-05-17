@@ -1,13 +1,13 @@
 .hotel-image{
-    height: 200px;
-    width: 250px;
+    width: 40%;
 }
 .content-div{
     margin: 5% 2%;
 }
 .hotel-image-description-div{
-    background-color: rgb(132, 136, 139);
-    width: 80%;
+    background-color: lightgray;
+    width: 100%;
+    display: flex;
 }
 ul{
     display: flex;
@@ -26,6 +26,7 @@ li{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding-left: 10%;
+    padding: 0% 3%;
     row-gap: 50px;
+    column-gap: 10vw;
 }
