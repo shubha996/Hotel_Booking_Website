@@ -1,3 +1,9 @@
+/* Main Content Section Container */
+.content-div{
+    margin: 10% 0;
+}
+
+/* Hotel Image and Details Section */
 .hotel-image{
     max-height: 300px;
     max-width: 270px;
@@ -17,6 +23,8 @@
     flex-direction: column;
     justify-content: center;
 }
+
+/* Booking Details and Billing Details with Pay Now Button */
 .bookin-details{
     margin: 2%;
 }
@@ -24,9 +32,6 @@
     margin: 2%;
     border-radius: 5px;
     padding: 1% 2%;
-}
-.content-div{
-    margin: 10% 0;
 }
 .payment-booking-details{
     display: flex;

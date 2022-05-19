@@ -17,6 +17,7 @@ body{
     border-top: 12px solid #444444;
     animation: loader-animation infinite 1s linear;
 }
+/* Loading Animation */
 @keyframes loader-animation {
     100%{transform: rotate(360deg);}
 }
