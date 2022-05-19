@@ -10,6 +10,9 @@
     width: 100%;
     display: flex;
 }
+.hotel-image-description-div:hover{
+    background-color: rosybrown;
+}
 .description{
     padding: 30px;
 }
@@ -19,9 +22,6 @@ ul{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-.map-div{
-    display: none;
 }
 li{
     padding: 2%;
