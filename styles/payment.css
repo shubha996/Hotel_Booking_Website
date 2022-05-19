@@ -26,7 +26,7 @@
     padding: 1% 2%;
 }
 .content-div{
-    margin: 5% 0;
+    margin: 10% 0;
 }
 .payment-booking-details{
     display: flex;
@@ -36,6 +36,7 @@
     border: 1px solid black;
     margin: 0% 2%;
     border-radius: 5px;
+    background-color: rosybrown;
 }
 strong{
     font-family: cursive;

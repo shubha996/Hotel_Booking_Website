@@ -34,3 +34,6 @@ li{
     row-gap: 50px;
     column-gap: 10vw;
 }
+#navigation-link{
+    color: black;
+}
