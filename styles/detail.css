@@ -64,6 +64,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
 }
 #btn-booknow-div{
     display: flex;
@@ -81,4 +82,47 @@ h5{
 }
 .hotel-description-div{
     margin: 1% 4% 7% 4%;
+}
+
+
+/* Media Query */
+@media screen and (max-width: 1150px) {
+    .forminput{
+        padding: 10px;
+    }
+    #middle{
+        width: 100%;
+    }
+    .content-div{
+        margin-top: 10%;
+    }   
+}
+@media screen and (max-width: 1000px) {
+    #arrow{
+        width: 5%;
+    }
+    #middle{
+        width: 90%
+    }
+    .content-div{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        max-height: fit-content;
+    }
+    .form-div{
+        border: 1px solid black;
+        border-top: 0px;
+    }
+    .form-div, .image-div{
+        width: 100%;
+    }
+    .hotel-image{
+        width: 770px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .hotel-image{
+        width: 100%;
+    }
 }

@@ -46,3 +46,45 @@
 strong{
     font-family: cursive;
 }
+.paynow-btn{
+    width: 100px
+}
+
+/* Media Query */
+@media screen and (max-width: 950px) {
+    .hotel-details{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hotel-details{
+        width: 80%;
+    }
+    .paynow-btn{
+        width: 140px;
+    }
+    .content-div{
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .hotel-details{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .discription{
+        align-items: center;
+    }
+    .payment-booking-details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .paynow-btn{
+        margin-left: 50px;
+        margin-bottom: 20px;
+    }
+}
