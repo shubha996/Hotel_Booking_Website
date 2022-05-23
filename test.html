@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gawai{
+            height: 300px;
+            width: 500px;
+            background-color: black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+
+    </header>
+    <div id="gawai"></div>
+    <button id="viemore" ondblclick="toggle()">View More</button>
+    <script>
+        function toggle(){
+            if(document.getElementById("gawai").style.display === "none"){
+                document.getElementById("gawai").style.display = "block";
+            //     document.getElementById("viemore").innerHTML = "View Less";
+            }else{
+                document.getElementById("gawai").style.display = "none";
+                // document.getElementById("viemore").innerHTML = "View More";
+            }
+        }
+            var element = `<div><h1>This is heading for header h1</h1></div>`;
+            document.getElementById("header").innerHTML = element;
+    
+    </script>
+</body>
+</html>

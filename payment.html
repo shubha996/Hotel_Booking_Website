@@ -14,13 +14,7 @@
 <body>
     <div class="main-div">
         <!-- Header Section Starts -->
-        <header>
-            <div class="header-div">
-                <div id="logo-div"><a href="index.html"><img id="header-logo" src="./assests/images/logo.png" alt="logo"></a></div>
-                <div id="login-div"><button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button></div>
-                <div></div>
-            </div>
-        </header>
+        <header id="header"></header>
         <!-- Modal Login Starts -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -33,17 +27,17 @@
                         <form action="index.html">
                             <div class="input-field"> 
                                 <label for="username">Username: </label>
-                                <input type="text" placeholder="Enter Username" required>
+                                <input id="username-field" type="text" placeholder="Enter Username" required>
                             </div>
                             <div class="input-field">
                                 <label for="password">Password: </label>
-                                <input type="password" placeholder="Enter Password" required>
+                                <input id="password-field" type="password" placeholder="Enter Password" required>
                             </div>
                             
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button data-bs-dismiss="modal" type="button" class="btn btn-primary">Login</button>
+                        <button data-bs-dismiss="modal" type="button" class="btn btn-primary" onclick="login()">Login</button>
                     </div>
                 </div>
             </div>
@@ -82,21 +76,7 @@
         <!-- Content Section Ends -->
 
         <!-- Footer Section Starts -->
-        <footer>
-            <div class="footer">
-                <div class="contactus">
-                    <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1">Contact Us</button>
-                </div>
-                <div class="copyright">
-                    <p>&copy; 2021 Shubham-Gawai@1996</p>
-                </div>
-                <div class="socialmedia">
-                    <a href="https://www.twitter.com"><img class="social-media-logo" src="./assests/images/twitter.png" alt="twitter-logo"></a>
-                    <a href="https://www.instagram.com"><img class="social-media-logo" src="./assests/images/instagram.png" alt="instagram-logo"></a>
-                    <a href="https://www.facebook.com/"><img class="social-media-logo" src="./assests/images/facebook.png" alt="facebook-logo"></a>
-                </div>
-            </div>
-        </footer>
+        <footer id="footer"></footer>
         <!-- Modal Contact Us Starts -->
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -122,5 +102,7 @@
         <!-- Modal Contact Us Ends -->
         <!-- Footer Section Ends -->
     </div>
+    <script src="./scripts/common.js"></script>
+    <script src="./scripts/payment.js"></script>
 </body>
 </html>

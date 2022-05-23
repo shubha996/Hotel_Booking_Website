@@ -27,7 +27,11 @@
 .city-cards-div{
     margin: 3% 5%;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
+}
+#city-cards-div-2{
+    display: none;
 }
 .city-image{
     height: 150px;

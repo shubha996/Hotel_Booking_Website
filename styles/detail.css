@@ -7,7 +7,9 @@
     display: flex;
     max-height: 450px;
 }
-
+section{
+    height: 1500px;
+}
 
 
 /* Hotel Image and Carousel Section */
