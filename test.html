@@ -15,24 +15,67 @@
     </style>
 </head>
 <body>
-    <header id="header">
-
-    </header>
-    <div id="gawai"></div>
-    <button id="viemore" ondblclick="toggle()">View More</button>
+    <div class="input-username"><input id="username" type="text" placeholder="username"></div>
+    <div class="input-password"><input id="password" type="password" placeholder="password"></div>
+    <button id="viewmore" onclick="toggle()">Login</button>
+    <button id="viewless" onclick="logout()">Logout</button>
+    <label for="date">Date:</label>
+    <input id="datepicker" type="date" name="date" min=05/22/2022>
+    <input id="todate" type="date">
     <script>
         function toggle(){
-            if(document.getElementById("gawai").style.display === "none"){
-                document.getElementById("gawai").style.display = "block";
-            //     document.getElementById("viemore").innerHTML = "View Less";
+            localStorage.setItem("username", "admin");
+            localStorage.setItem("password", "admin");
+
+            reftousername = document.getElementById("username");
+            reftopassword = document.getElementById("password");
+
+            if(reftousername.value == localStorage.getItem("username") && reftopassword.value == localStorage.getItem("password")){
+                alert("success");
             }else{
-                document.getElementById("gawai").style.display = "none";
-                // document.getElementById("viemore").innerHTML = "View More";
+                alert("login failed");
             }
         }
-            var element = `<div><h1>This is heading for header h1</h1></div>`;
-            document.getElementById("header").innerHTML = element;
-    
-    </script>
+        function logout(){
+            localStorage.clear("username");
+            localStorage.clear("password");
+
+            window.location.href("test.html")
+        }    
+        
+        
+        // Date Picker
+        // var date = new Date();
+
+        // var day = date.getDate();
+        // if(day < 10){
+        //     day = "0" + day;
+        // }
+
+        // var month = date.getMonth() + 1;
+        // if(month < 10){
+        //     month = "0" + month;
+        // }
+
+        // var year = date.getFullYear();
+
+        // var todaysdate = month + "/" + day + "/" + year;
+        // console.log(todaysdate);
+
+        // var datepicker = document.getElementById("datepicker");
+
+        // datepicker.addEventListener('focusout', (event) => {
+        //     event.target.datepicker = todaysdate;
+        // })
+        
+        
+        var fromdate = document.getElementById("datepicker").value;
+        var todate = document.getElementById("todate").value;
+        console.log(fromdate - todate);
+        
+
+
+
+</script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+var btn = 'button',
+session =(localStorage.getItem("username") != null) ? true : false;
+// Header Template
 var header =    `<div class="header-div">
                     <div id="logo-div">
                         <a href="index.html">
@@ -5,11 +8,12 @@ var header =    `<div class="header-div">
                         </a>
                     </div>
                     <div id="login-div">
-                        <button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+                        <div class="head-btn"></div>
                     </div>
                 </div>`;
 document.getElementById("header").innerHTML = header;
 
+// Footer Template
 var footer =    `<div class="footer">
                     <div class="contactus">
                         <button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal1">Contact Us</button>
@@ -25,14 +29,55 @@ var footer =    `<div class="footer">
                 </div>`;
 document.getElementById("footer").innerHTML = footer;
 
+//Login Function
+
 function login(){
+
+    
+    // if(localStorage.getItem("username") && localStorage.getItem("password"))
+
     var refToInput = document.getElementById("username-field");
     var refToPassword = document.getElementById("password-field");
 
-    if(refToInput.value === "admin" && refToPassword.value === "admin"){
+    localStorage.setItem("username", "admin");
+    localStorage.setItem("password", "admin");
+
+    if(refToInput.value == localStorage.getItem("username") && refToPassword.value == localStorage.getItem("password")){
         window.alert("Successfully loggedin");
-        document.getElementById("login-btn").innerHTML = "Logout";
-    }else{
+        body();
+    }
+    else{
         window.alert("incorrect login details");
     }
+}
+
+function body(){
+    var btn = '<button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>';
+    if(localStorage.getItem("username") != null){
+        btn = '<button id="login-btn" type="button" class="btn btn-primary" onclick="logout()">Logout</button>';
+    }
+    document.getElementsByClassName('head-btn')[0].innerHTML = btn;
+    
+}
+// $(document).ready(function(){
+//     if(session){
+//         btn = '<button id="login-btn" type="button" class="btn btn-primary" onclick="logout()">Logout</button>';
+//     }
+//     $('.head-btn').html(btn);
+// });
+
+// $('body'){
+//     var btn = '<button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>';
+//     if(localStorage.getItem("username") != null){
+//         btn = '<button id="login-btn" type="button" class="btn btn-primary" onclick="logout()">Logout</button>';
+//     }
+//     document.getElementsByClassName('head-btn')[0].innerHTML = btn;
+    
+// }
+
+function logout(){
+    var btn = '<button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>';
+    alert('logged out');
+    localStorage.clear();
+    document.getElementsByClassName('head-btn')[0].innerHTML = btn;
 }

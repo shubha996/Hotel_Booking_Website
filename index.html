@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./styles/index.css">
     <title>Index</title>
 </head>
-<body>
+<body onload="body()">
     <!-- Header Section Starts -->
     <header id="header"></header>
     <!-- Modal Login Starts -->
@@ -40,7 +40,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button data-bs-dismiss="modal" type="button" class="btn btn-primary" onclick="login()">Login</button>
+                    <button data-bs-dismiss="modal" type="button" class="btn btn-primary"  onclick="login()">Login</button>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 </div>
             </div>
             <br>
-            <div id="city-cards-div-2" class="city-cards-div">
+            <div id="city-cards-div-2" class="city-cards-div" style="display: none;">
                 <div class="city-image-div">
                     <img class="city-image" src="https://media-cdn.tripadvisor.com/media/photo-s/15/4d/46/b8/chennai-madras.jpg" alt="Chennai">
                     <a href="list.html"><div class="overlaytext">Chennai</div></a>
