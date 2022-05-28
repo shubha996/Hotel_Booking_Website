@@ -1,5 +1,3 @@
-var btn = 'button',
-session =(localStorage.getItem("username") != null) ? true : false;
 // Header Template
 var header =    `<div class="header-div">
                     <div id="logo-div">
@@ -8,7 +6,7 @@ var header =    `<div class="header-div">
                         </a>
                     </div>
                     <div id="login-div">
-                        <div class="head-btn"></div>
+                        <button id="login-btn" type="button" class="btn btn-primary" data-bs-target="#exampleModal">Login</button>
                     </div>
                 </div>`;
 document.getElementById("header").innerHTML = header;
@@ -29,55 +27,41 @@ var footer =    `<div class="footer">
                 </div>`;
 document.getElementById("footer").innerHTML = footer;
 
-//Login Function
+// Login Logout Function
+
+localStorage.setItem("isLogin", "false");
+
+document.getElementById("login-btn").setAttribute("data-bs-toggle", "modal");
+
+document.getElementById("modal-login").addEventListener("click", login);
 
 function login(){
+    var reftousername = document.getElementById("username-field").value;
+    var reftopassword = document.getElementById("password-field").value;
+    var reftologinbtn = document.getElementById("login-btn");
 
-    
-    // if(localStorage.getItem("username") && localStorage.getItem("password"))
+    if(reftousername === "admin" && reftopassword === "admin"){
+        localStorage.setItem("username", reftousername);
+        localStorage.setItem("password", reftopassword);
+        localStorage.setItem("isLogin", "true");
 
-    var refToInput = document.getElementById("username-field");
-    var refToPassword = document.getElementById("password-field");
-
-    localStorage.setItem("username", "admin");
-    localStorage.setItem("password", "admin");
-
-    if(refToInput.value == localStorage.getItem("username") && refToPassword.value == localStorage.getItem("password")){
-        window.alert("Successfully loggedin");
-        body();
-    }
-    else{
-        window.alert("incorrect login details");
+        window.alert("Login Successful !");
+        reftologinbtn.innerHTML = "Logout";
+        document.getElementById("login-btn").removeAttribute("data-bs-toggle");
+        document.getElementById("paynow-btn").disabled = false;
+        document.getElementById("login-btn").addEventListener("click", logout);
+    }else{
+        reftousername = "";
+        reftopassword = "";
+        window.alert("Login Failed !");
     }
 }
-
-function body(){
-    var btn = '<button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>';
-    if(localStorage.getItem("username") != null){
-        btn = '<button id="login-btn" type="button" class="btn btn-primary" onclick="logout()">Logout</button>';
-    }
-    document.getElementsByClassName('head-btn')[0].innerHTML = btn;
-    
-}
-// $(document).ready(function(){
-//     if(session){
-//         btn = '<button id="login-btn" type="button" class="btn btn-primary" onclick="logout()">Logout</button>';
-//     }
-//     $('.head-btn').html(btn);
-// });
-
-// $('body'){
-//     var btn = '<button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>';
-//     if(localStorage.getItem("username") != null){
-//         btn = '<button id="login-btn" type="button" class="btn btn-primary" onclick="logout()">Logout</button>';
-//     }
-//     document.getElementsByClassName('head-btn')[0].innerHTML = btn;
-    
-// }
 
 function logout(){
-    var btn = '<button id="login-btn" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>';
-    alert('logged out');
-    localStorage.clear();
-    document.getElementsByClassName('head-btn')[0].innerHTML = btn;
+    localStorage.removeItem("username");
+    localStorage.removeItem("password");
+    localStorage.setItem("isLogin", "false");
+    document.getElementById("login-btn").innerHTML = "Login";
+    document.getElementById("login-btn").setAttribute("data-bs-toggle", "modal");
+    document.getElementById("paynow-btn").disabled = true;
 }
