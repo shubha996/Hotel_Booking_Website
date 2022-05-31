@@ -1,3 +1,5 @@
+// var API_KEY = "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e";  Exhausted
+var API_KEY = "09f4b597e7msh9576e1eac0cb495p161e6ajsn917e25f7d037";
 
 // View More & View Less Button Toggle Function
 function toggle(){
@@ -30,10 +32,10 @@ function locationSearchBox () {
                 fetchResult(jsondata.data.Typeahead_autocomplete.results);
             }
         }
-        xhr.open("GET", `https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?query=${refToSearchBox}&lang=en_US&units=km`);
+        xhr.open("GET", "https://travel-advisor.p.rapidapi.com/locations/v2/auto-complete?lang=en_US&units=km&query=" + refToSearchBox);
         xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-        xhr.setRequestHeader("X-RapidAPI-Key", "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e")
-        xhr.send(data);
+        xhr.setRequestHeader("X-RapidAPI-Key", API_KEY)
+        xhr.send();
     }else{
         refToSearchBox.innerHTML = "";
     }

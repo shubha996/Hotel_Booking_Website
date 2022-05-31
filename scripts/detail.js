@@ -1,3 +1,6 @@
+// var API_KEY = "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e";  Exhausted
+var API_KEY = "09f4b597e7msh9576e1eac0cb495p161e6ajsn917e25f7d037";
+
 // Disabling Previous days from today on Date Picker
 
 var dateStringObject = new Date();
@@ -46,6 +49,8 @@ function priceCalculation (){
 var url = window.location.search;
 var searchURL = new URLSearchParams(url);
 var id = searchURL.get("id");
+document.getElementById('id').value = id;
+console.log(id);
 
 function fetchHotelDetails(){
     const data = null;
@@ -55,16 +60,15 @@ function fetchHotelDetails(){
     xhr.addEventListener("readystatechange", function () {
         if (xhr.readyState === xhr.DONE) {
             var jsondata = JSON.parse(xhr.responseText).data;
-            console.log(jsondata);
             renderHotelDetails(jsondata);
         }
     });
 
-    xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?checkin=2022-05-30&adults=1&lang=en_US&currency=USD&nights=2&location_id=" + id);
+    xhr.open("GET", "https://travel-advisor.p.rapidapi.com/hotels/get-details?checkin=2022-05-31&adults=1&lang=en_US&currency=USD&nights=2&location_id=" + id);
     xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-    xhr.setRequestHeader("X-RapidAPI-Key", "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e");
+    xhr.setRequestHeader("X-RapidAPI-Key", "09f4b597e7msh9576e1eac0cb495p161e6ajsn917e25f7d037");
 
-    xhr.send(data);
+xhr.send(data);
 }
 fetchHotelDetails();
 
@@ -119,7 +123,7 @@ xhr.addEventListener("readystatechange", function () {
 
 xhr.open("GET", "https://travel-advisor.p.rapidapi.com/photos/list?currency=USD&limit=50&lang=en_US&location_id=" + id);
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-xhr.setRequestHeader("X-RapidAPI-Key", "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e");
+xhr.setRequestHeader("X-RapidAPI-Key", API_KEY);
 
 xhr.send(data);
 }

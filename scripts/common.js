@@ -33,7 +33,7 @@ localStorage.setItem("isLogin", "false");
 
 document.getElementById("login-btn").setAttribute("data-bs-toggle", "modal");
 
-document.getElementById("modal-login").addEventListener("click", login);
+// document.getElementById("modal-login").addEventListener("click", login);
 
 function login(){
     var reftousername = document.getElementById("username-field").value;

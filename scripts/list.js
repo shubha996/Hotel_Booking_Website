@@ -1,3 +1,6 @@
+// var API_KEY = "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e";  Exhausted
+var API_KEY = "09f4b597e7msh9576e1eac0cb495p161e6ajsn917e25f7d037";
+
 // Search Hotels API call
 var url = window.location.search;
 var searchURL = new URLSearchParams(url);
@@ -17,7 +20,7 @@ xhr.addEventListener("readystatechange", function () {
 xhr.open("GET", "https://travel-advisor.p.rapidapi.com/locations/search?&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US&query=" + city);
 
 xhr.setRequestHeader("X-RapidAPI-Host", "travel-advisor.p.rapidapi.com");
-xhr.setRequestHeader("X-RapidAPI-Key", "70f4ec573emsh921104ddc08f3f0p1477a8jsn1b749f29c79e");
+xhr.setRequestHeader("X-RapidAPI-Key", API_KEY);
 
 xhr.send(data);
 
