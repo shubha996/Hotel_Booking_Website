@@ -19,9 +19,6 @@ var todaysDate = currentYear + '-' + currentMonth + '-' + currentDate;
 
 document.getElementById("fromDate").setAttribute("min", todaysDate);
 
-
-
-
 // Price Calculation
 
 function priceCalculation (){
@@ -45,6 +42,7 @@ function priceCalculation (){
     document.getElementById("totalAmount").value = "Rs. " + total;
 }
 
+// API call for fetching hotel details
 var url = window.location.search;
 var searchURL = new URLSearchParams(url);
 var id = searchURL.get("id");
@@ -58,28 +56,7 @@ function fetchHotelDetails(){
         if (xhr.readyState === xhr.DONE) {
             var jsondata = JSON.parse(xhr.responseText).data;
             console.log(jsondata);
-            jsondata.forEach(element => {
-                var amenities = element.amenities;
-                amenities.slice(0, 10).forEach(item => {
-                    var amenitiesdata = `<li>${item.name}</li>`;
-                    var reftoul = document.getElementById("amenities-list");
-                    reftoul = reftoul + amenitiesdata;
-                })
-                var newDetails =    `<h2>${element.name}</h2>
-                                    <h5>RATING</h5>
-                                    <p>
-                                        <span class="fa fa-star checked"></span>
-                                        <span>${element.rating}</span>
-                                    </p>
-                                    <h5>AMENITIES</h5>
-                                    <ul id="amenities-list">
-                                        <li></li>
-                                    </ul>
-                                    <h5>DESCRIPTION</h5>
-                                    <p>${element.descripition}</p>`;
-                document.getElementsByClassName("hotel-description-div")[0].innerHTML = 
-                document.getElementsByClassName("hotel-description-div")[0].innerHTML + newDetails;
-            });
+            renderHotelDetails(jsondata);
         }
     });
 
@@ -91,7 +68,35 @@ function fetchHotelDetails(){
 }
 fetchHotelDetails();
 
+// Rendering Hotel Details
+function renderHotelDetails(jsondata){
+    var name = jsondata[0].name;
+    document.getElementById("hotelName").innerHTML = name;
 
+    var description = jsondata[0].description;
+    document.getElementById("description").innerHTML = description;
+
+    var rating = jsondata[0].rating;
+    document.getElementById("ratings").innerHTML = document.getElementById("ratings").innerHTML + `<span>${rating}</span>`
+    
+    var amenities = jsondata[0].amenities;
+    var amenitiesArray = [];
+    if(amenities.length > 10){
+        amenities.slice(0, 10).forEach(data => {
+            amenitiesArray.push(data);
+        })
+    }else{
+        amenities.forEach(data => {
+            amenitiesArray.push(data);
+        })
+    }
+    amenitiesArray.forEach(data => {
+        var newli = `<li>${data.name}</li>`;
+        document.getElementById("amenitiesList").innerHTML = document.getElementById("amenitiesList").innerHTML + newli;
+    })
+}
+
+// API call for fetching Hotel Images and rendering the same
 function fetchHotelPhotos(){
 
 const data = null;

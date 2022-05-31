@@ -48,7 +48,7 @@ function login(){
         window.alert("Login Successful !");
         reftologinbtn.innerHTML = "Logout";
         document.getElementById("login-btn").removeAttribute("data-bs-toggle");
-        document.getElementById("paynow-btn").disabled = false;
+        // document.getElementById("paynow-btn").disabled = false;
         document.getElementById("login-btn").addEventListener("click", logout);
     }else{
         reftousername = "";
